@@ -295,7 +295,7 @@ export default function Home() {
                 </div>
                 <div className={styles.parentExperience}>
                   <Box sx={{ width: '100%' }}>
-                    <Stepper className={styles.mobileStepper} activeStep={-1} nonLinear={true} alternativeLabel style={{ textAlign: "center" }} orientation="vertical">
+                    <Stepper className={styles.mobileStepper} activeStep={-1} nonLinear={true} alternativeLabel  orientation="vertical">
                       {steps.map((label) => (
                         <Step key={label.id}>
                           <StepLabel> <motion.div
@@ -316,7 +316,7 @@ export default function Home() {
                         </Step>
                       ))}
                     </Stepper>
-                    <Stepper className={styles.webStepper} activeStep={-1} nonLinear={true} alternativeLabel style={{ textAlign: "center" }} >
+                    <Stepper className={styles.webStepper} activeStep={-1} nonLinear={true} alternativeLabel>
                       {steps.map((label) => (
                         <Step key={label.id}>
                           <StepLabel> <motion.div

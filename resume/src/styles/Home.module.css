@@ -408,7 +408,12 @@
 }
 .mobileStepper
 {
-  display: none;
+  display: none !important;
+}
+.webStepper
+{
+  display: flex !important;
+  text-align: center;
 }
 #titleText
 {
@@ -424,15 +429,16 @@
   }
   .image2
   {
-    display:none
+    display:none;
   }
   .mobileStepper
   {
-    display: block;
+    display: block !important;
+    text-align: center;
   }
   .webStepper
 {
-  display: none;
+  display: none !important;
 }
 #titleText
 {
