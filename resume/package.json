@@ -1,0 +1,35 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "homepage": "https://khushalyad3.github.io/resume",
+  "private": true,
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "resume -d build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.15",
+    "d3-ease": "^3.0.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.11.6",
+    "next": "^13.2.4",
+    "react": "18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "18.2.0",
+    "react-move": "^6.5.0",
+    "react-social-icons": "^5.15.0",
+    "react-typing-animator": "^5.5.0",
+    "tailwind-typewriter": "^1.0.1"
+  },
+  "devDependencies": {
+    "resume": "^0.0.1"
+  }
+}
