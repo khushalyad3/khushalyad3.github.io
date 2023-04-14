@@ -168,8 +168,8 @@ export default function Home() {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -10, opacity: 0 }}
-                    transition={{ duration: 0.5 }} >  <h2 className='bd1'>
-                      Hi, I'm <span style={{ color: "orange" }}>Khushal yadav</span>
+                    transition={{ duration: 0.5 }} ><h2 className='bd1'>
+                      Hi, I&apos;m <span style={{ color: "orange" }}>Khushal yadav</span>
                     </h2>
                   </motion.div>
                   <br></br>
