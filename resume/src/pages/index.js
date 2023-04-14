@@ -32,6 +32,7 @@ import StepLabel from '@mui/material/StepLabel';
 // Animation
 import { easeQuadInOut } from "d3-ease";
 import { borderRadius, fontSize, padding } from '@mui/system'
+import { StepContent } from '@mui/material'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -289,12 +290,33 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className='pdt_2 pdb_1' style={{ width: "100%", textAlign: 'left' }}>
+                <div className="pdt_2 pdb_1" id={styles.titleText}>
                   {Titles("Education/Experiences")}
                 </div>
                 <div className={styles.parentExperience}>
                   <Box sx={{ width: '100%' }}>
-                    <Stepper activeStep={-1} nonLinear={true} alternativeLabel style={{ textAlign: "center" }}>
+                    <Stepper className={styles.mobileStepper} activeStep={-1} nonLinear={true} alternativeLabel style={{ textAlign: "center" }} orientation="vertical">
+                      {steps.map((label) => (
+                        <Step key={label.id}>
+                          <StepLabel> <motion.div
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -10, opacity: 0 }}
+                            transition={{ duration: 0.5 }}>  <h5 style={{ color: "orange", fontWeight: "bold", padding: "0.2rem", borderRadius: "2px" }}>{label.job}</h5>
+                          </motion.div></StepLabel>
+                          <motion.div
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -10, opacity: 0 }}
+                            transition={{ duration: 0.8 }} style={{ color: "white", fontWeight: "bold", padding: "0.4rem", borderRadius: "2px" }}>
+                            <h6 className='pdt_0_2'>{label.name}</h6>
+                            <h6 className='pdt_0_2'>{label.year}</h6>
+                            <h6 className='pdt_0_2'>({label.type})</h6>
+                          </motion.div>
+                        </Step>
+                      ))}
+                    </Stepper>
+                    <Stepper className={styles.webStepper} activeStep={-1} nonLinear={true} alternativeLabel style={{ textAlign: "center" }} >
                       {steps.map((label) => (
                         <Step key={label.id}>
                           <StepLabel> <motion.div
@@ -318,7 +340,7 @@ export default function Home() {
                     </Stepper>
                   </Box>
                 </div>
-                <div className='pdt_2 pdb_1' style={{ width: "100%", textAlign: 'left' }}>
+                <div className='pdt_2 pdb_1' id={styles.titleText}>
                   {Titles("Projects")}
                 </div>
 
